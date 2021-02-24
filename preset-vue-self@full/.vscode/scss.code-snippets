@@ -11,6 +11,18 @@
     "scope": "scss",
     "description": "集合-文字换行处理"
   },
+  "@text-hidden-line": {
+    "body": "@include text-hidden-line($1);",
+    "prefix": "@include text-hidden-line",
+    "scope": "scss",
+    "description": "集合-多行文字换行处理"
+  },
+  "@not-last-child": {
+    "body": "@include not-last-child($1, $2);",
+    "prefix": "@include not-last-child",
+    "scope": "scss",
+    "description": "除了最后一个元素"
+  },
   "@include-self-font-size": {
     "body": "@include self-font-size(\\$_font-${1|size-sm,size-base,size-lg,size-title,size-subtitle,size-paragraph|});",
     "prefix": "@include self-font-size",

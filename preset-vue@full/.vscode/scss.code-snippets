@@ -5,11 +5,23 @@
     "scope": "scss",
     "description": "声明使用集合"
   },
-  "text-ellipsis": {
+  "@include-text-ellipsis": {
     "body": "@include text-ellipsis();",
     "prefix": "@include text-ellipsis",
     "scope": "scss",
     "description": "集合-文字换行处理"
+  },
+  "@text-hidden-line": {
+    "body": "@include text-hidden-line($1);",
+    "prefix": "@include text-hidden-line",
+    "scope": "scss",
+    "description": "集合-多行文字换行处理"
+  },
+  "@not-last-child": {
+    "body": "@include not-last-child($1, $2);",
+    "prefix": "@include not-last-child",
+    "scope": "scss",
+    "description": "除了最后一个元素"
   },
   "$_xs": {
     "body": "\\$_xs",

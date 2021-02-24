@@ -2,13 +2,28 @@
 
 @import "./variables.scss";
 
-/* 文字溢出处理 */
-@mixin text-ellipsis {
+/* 文字溢出处理(一行) */
+@mixin text-ellipsis($width) {
+  max-width: $width;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+/* 文字溢出处理(多行) */
+@mixin text-hidden-line ($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+/* 除了最后一个元素 */
+@mixin not-last-child ($attr, $val) {
+  &:not(:last-child) {
+    #{$attr}: $val
+  }
+}
 /* 自适应字体尺寸($size) -> ($xl:100%, $lg:100%, $md:90%, $sm:70%, $xs:65%) */
 /* 使用示例: @include self-font-size(16px); */
 @mixin self-font-size ($size) {
