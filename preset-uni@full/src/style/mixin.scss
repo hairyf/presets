@@ -16,6 +16,13 @@
   overflow: hidden;
 }
 
+/* 除了最后一个元素 */
+@mixin not-last-child ($attr, $val) {
+  &:not(:last-child) {
+    #{$attr}: $val
+  }
+}
+
 /* 填充页面 */
 @mixin full-page($container, $color: #F5F5F5) {
   page {

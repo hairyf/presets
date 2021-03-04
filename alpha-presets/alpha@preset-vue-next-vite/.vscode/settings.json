@@ -9,5 +9,6 @@
   "eslint.validate": [
     "javascirpt",
     "typescript"
-  ]
+  ],
+  "volar.tsPlugin": true
 }

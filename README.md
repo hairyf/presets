@@ -24,21 +24,19 @@
 
 2. 进入项目安装依赖：`npm install`
 
-3. 运行打包命令：`npm run dev:mp-weixin`
+3. 运行编译命令：`npm run dev:mp-weixin`
 
-## web-vue@2 项目模板使用说明
+## web-vue@3 项目模板使用说明
 
 1. 拷贝项目模板
 
-   ~~~
-   web-vue2(web模板): dgit TuiMao233/project-development-template/preset-vue@full
-   
-   web-vue2-self(web自适应模板): dgit TuiMao233/project-development-template/preset-vue-self@full
+   ~~~npm
+   web-vue3-vite(vue3-vite测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-vue-next-vite
    ~~~
    
 2. 进入项目安装依赖：`npm install`
 
-3. 运行打包命令：`npm run serve`
+3. 运行编译命令：`npm run dev`
 
 ## 多端开发框架Vue3兼容对比表
 
@@ -50,12 +48,12 @@
 | IOS 9 或 IE 11           | 暂未兼容（等待Vue官方支持）          | 暂未兼容（等待Vue官方支持）   |
 | setup 语法糖（实验阶段） | 暂不支持                             | 暂无测试                      |
 
-## 其他测试模板拷贝指令
+## 其他模板拷贝指令
 
-~~~js
+~~~npm
+web-vue2(web模板): dgit TuiMao233/project-development-template/preset-vue@full
+
 web-vue3-cli(vue3-cli测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-vue-next-cli
-
-web-vue3-vite(vue3-vite测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-vue-next-vite
 
 web-react-vite(react-vite测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-react-vite
 ~~~
