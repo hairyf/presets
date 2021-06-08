@@ -31,7 +31,7 @@
 1. 拷贝项目模板
 
    ~~~npm
-   web-vue3-vite(vue3-vite测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-vue-next-vite
+   web-vue3-vite(vue3-vite测试模板): dgit TuiMao233/project-development-template/preset-vue@full
    ~~~
    
 2. 进入项目安装依赖：`npm install`
@@ -51,7 +51,7 @@
 ## 其他模板拷贝指令
 
 ~~~npm
-web-vue2(web模板): dgit TuiMao233/project-development-template/preset-vue@full
+web-vue3(web模板): dgit TuiMao233/project-development-template/preset-vue@full
 
 web-vue3-cli(vue3-cli测试模板): dgit TuiMao233/project-development-template/alpha-presets/alpha@preset-vue-next-cli
 

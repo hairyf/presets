@@ -9,5 +9,9 @@
   "eslint.validate": [
     "javascirpt",
     "typescript"
-  ]
+  ],
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }

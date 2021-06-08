@@ -1,27 +1,32 @@
-/* sotre>index.ts 统一规范
- * 1. 定义数据行为需在mutations-type中定义常量
- * 2. 储存数据保持精简，actions每个方法中需要添加注释
- * 至于为何需要添加mutations-type常量, 请在官网中寻找答案:
- * https://vuex.vuejs.org/zh/guide/mutations.html#使用常量代替-mutation-事件类型
+/*
+ * @Author: Mr.Mao
+ * @Date: 2021-05-18 15:43:17
+ * @LastEditTime: 2021-06-08 16:18:53
+ * @Description:
+ * @LastEditors: Mr.Mao
+ * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import Vue from 'vue';
-import Vuex from 'vuex';
-import { RECEIVE_COUNT } from './types';
 
-Vue.use(Vuex);
-/* 注意: count为示例案例, 项目中请自行删除 */
-export default new Vuex.Store({
-  state: {
-    count: 18,
-  },
-  mutations: {
-    [RECEIVE_COUNT]: (state, count) => (state.count = count),
-  },
-  actions: {
-    // 接收count
-    recCount({ commit }, count) {
-      commit(RECEIVE_COUNT, count);
-    },
-  },
-  getters: {},
-});
+import { createStore, Store } from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
+import user from './modules/user'
+import common from './modules/common'
+
+/** Vuex 数据管理 */
+const store = createStore({
+  modules: { common, user },
+  plugins: [createPersistedState()]
+}) as Store<StoreType>
+
+/** 完整数据管理类型 */
+type StoreType = {
+  user: typeof user.state
+  common: typeof common.state
+}
+
+/** 覆盖 useStore 类型 */
+declare module 'vuex' {
+  export function useStore<S = StoreType>(): Store<S>
+}
+
+export default store
